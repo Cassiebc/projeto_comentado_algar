@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!-- Tag doctype informa qual o tipo do documento, no caso html -->
+<html lang="pt-br"> <!-- Tag html engloba todo arquivo html, com as tags head e body, com exceção da doctype -->
+<!-- Também passamos o atributo lang, para que os mecanismos de buscas entendam que nosso site deverá ser
+priorizado em países com a língua especificada -->
+    
+<head> <!-- Tag head: informações que serão passadas para o navegador -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Tag title colocamos o que vai na aba do navegador -->
+        <title>Dino Virtual</title>
+        <!-- reset.css para zerar as configurações que já vêm nos navegadores -->
+        <link rel="stylesheet" href="reset.css">
+        <!-- Importamos as folhas de estilo (CSS) aqui dentro da tag head -->
+        <link rel="stylesheet" href="estilo.css">
+        <!-- Importamos o link da fonte escolhida no Google Fonts aqui na tag head também -->
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <!-- Tag body: colocamos todo o conteúdo do site, ou seja, tudo o que conseguimos ver -->
+    <body>
+        
+        <!-- ATENÇÃO! Primeiramente, ignore o formulário, e comece na linha 45 (#Mobile)-->
+
+        <form> <!-- Tag para englobar todos os elementos de formulário -->
+            <h2 class="titulos">Dino Virtual</h2> <!-- Usei h2 pois já tem um h1 na página -->
+
+            <label for="inputNome" class="titulos">Nome</label> <!-- label referente ao input abaixo (for e id devem ter mesmos valores)-->
+            <input type="text" id="inputNome"> <!-- Aqui usaremos input do type text, mas aproveite para experimentar outros tipos e ver quais são eles-->
+
+            <fieldset> <!-- fieldset agrupa elementos que façam sentido estar juntos e que possuam o mesmo name -->
+                <legend class="titulos">O que seu dino prefere?</legend> <!-- legend é a tag que usamos para um título dentro do fieldset -->
+
+                <label><input type="radio" name="preferencia" checked>Comer</label> <!-- Aqui as labels estão sem o for, pois elas estão englobando o input (é uma outra possibilidade)-->
+                <label><input type="radio" name="preferencia">Programar</label>
+                <!-- input do tipo radio é aquele que podemos escolher apenas uma opção, mas para que isso seja possível, esses inputs devem ter o mesmo name-->
+                <label><input type="radio" name="preferencia">Jogar</label>
+                <!-- Geralmente, marcamos algum input radio com checked, para que o usuário não deixe o campo sem marcar -->
+            </fieldset> <!-- Fechamento fieldset -->
+
+            <input type="submit" value="Enviar" class="enviar"> <!-- Em formulários, geralmente usamos o input do tipo submit para um botão -->
+        </form> <!-- Fechamento form -->
+
+
+        <!-- >>>>>> #Mobile / #Desktop <<<<<< -->
+        <section class="display-none"> <!-- Usei a tag section, por ser uma tag semântica, mas poderia ser uma div -->
+        <!-- Classe display-none para que ela fique invisivel, só ficará visível quando enviarmos o formulário preenchido -->    
+        <!-- Coloque essa classe só quando for fazer o formulário -->
+        
+            <header> <!-- Cabeçalho -->
+                <img src="dino.png" alt="Imagem do tiranossauro."> <!-- Imagem do Dino, fique à vontade para usar qualquer outra! -->
+
+                <h1 id="nomeDoDino">REX</h1> <!-- Nome do Dino em um h1 -->
+
+                <!-- Link para a espécie no href, target="_blank" para abrir em nova guia -->
+                <a class="link-especie" href="https://pt.wikipedia.org/wiki/Tiranossauro" target="_blank">Tyrannosaurus</a>
+            </header> <!-- Fechamento do cabeçalho -->
+
+            <main> <!-- Conteúdo que julguei ser o principal -->
+
+                <div class="container-texto">
+                    <p>REX gosta de caçar.</p>
+                </div>
+
+                <div class="container-video"> <!-- Para o iframe, escolha o vídeo do youtube, vá em compartilhar > incorporar > copie a tag iframe -->
+                    <iframe src="https://www.youtube.com/embed/BkbcAeD0JZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </main> <!-- Fechamento conteúdo principal -->
+
+        </section> <!-- Fechamento da section -->
+    </body> <!-- Fechamento da body -->
+</html> <!-- Fechamento da html -->

@@ -1,0 +1,128 @@
+* {
+    /* evita que, ao adicionarmos um padding, o tamanho do elemento seja alterado */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAB733;
+    font-family: 'Baloo 2', cursive;
+}
+
+/* >>>>>> FORMULARIO <<<<<< */
+form {
+    background-color: #FFDD66;
+    width: 296px;
+    height: 320px;
+    padding: 16px;
+    border-radius: 36px;
+    margin: 24px auto; /* 24px está sendo aplicada em cima e embaixo, auto é o valor que usamos para centralizar horizontalmente o elemento na tela */
+    /* Atenção: o valor auto não funciona verticalmente */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.titulos {
+    color: #1976C7;
+    font-size: 24px;
+    font-weight: 700; /* Utilizei 700 porque foi a expessura que eu importei do Google Fonts, se inportar outra(s), atente-se a isso! */
+}
+
+input[type="text"] { /* Essa é uma outra forma de chamarmos um input, no caso do typo text*/
+    /* Mas lembre-se, se tivermos mais de um input de texto no html, o ideal é usarmos classes*/
+    
+    width: 100%; /* Defini a largura 100% para quebrar a linha e o input ir para a linha de baixo*/
+    height: 40px;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 4px 0 24px; /* top right-left bottom */
+}
+
+.enviar {
+    background-color: #FAB733;
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    border: none; /* Tirei a borda porque eu acho feia, também podemos tirar o outline do input  com o valor none */
+    font-size: 24px;
+    font-weight: 700;
+    color: #1976C7;
+    font-family: 'Baloo 2', cursive;
+    margin-top: 16px;
+}
+
+.display-none {
+    display: none;
+}
+
+/* >>>>>> MEU DINO <<<<<< */
+/* Essa parte (até a linha 107) fizemos no 3º encontro */
+header {
+    background-color: #FFDD66;
+    height: 220px;
+    padding-top: 20px;
+    position: relative; 
+}
+
+#nomeDoDino {
+    color: #1976C7;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 88px;
+    right: 40px;
+}
+
+.link-especie {
+    color: #000000;
+    font-size: 18px;
+    font-style: italic;
+    position: absolute;
+    top: 138px;
+    right: 40px;
+}
+
+.container-texto {
+    background-color: #FFDD66;
+    margin: 16px auto 0;
+    width: 296px;
+    height: 60px;
+    padding: 22px;
+    border-radius: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-video {
+    width: 296px;
+    height: 156px;
+    margin: 16px auto 0;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* >>>>>> #DESKTOP - parte responsiva <<<<<<*/
+/* Defini aqui que alguns elementos iriam mudar quando a tela estivesse com pelo menos 520px de largura */
+@media (min-width:520px) { 
+    #nomeDoDino {
+        top: 108px; /* Alterei o top desse h1 e posicionei ele no centro com 50% */
+        right: 50%; /* Existem outras formas para fazermos isso, mas o ideal é a gente ir aprendendo passo por passo para não se perder no meio do caminho, mesmo que no começo não fique tão perfeitinho! */
+    }
+
+    .link-especie {
+        top: 120px; 
+    }
+    
+    .container-texto,  .container-video {
+        width: 500px; /* Aqui alterei a largura desses elementos */
+    }
+
+    iframe {
+        height: 320px; /* Para não cortar o vídeo alterei a altura também, você pode testar um valor ou fazer uma regra de 3 simples */
+    }
+}
